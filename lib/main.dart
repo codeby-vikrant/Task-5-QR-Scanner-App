@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task_5/screens/generate_code.dart';
+import 'package:task_5/screens/scan_code.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,8 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
+    return  MaterialApp(
+      title: 'Flutter QR Scan App',
+      routes: {
+        "/generate": (context) => const GenerateCodeScreen(),
+        "/scan":(context) => const ScanCodeScreen(),
+      },
+      initialRoute: "/scan",
     );
   }
 }
