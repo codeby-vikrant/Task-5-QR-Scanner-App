@@ -14,7 +14,7 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
       appBar: AppBar(
         title: const Text("Flutter QR Scan App"),
         actions: [IconButton(onPressed: (){
-          Navigator.push(context, "/generate" as Route<Object?>);
+          Navigator.popAndPushNamed(context, "/generate");
         }, icon: const Icon(Icons.qr_code))],
       ),
     );

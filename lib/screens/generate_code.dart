@@ -16,7 +16,7 @@ class _GenerateCodeScreenState extends State<GenerateCodeScreen> {
         title: const Text("Generate QR Code"),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, "/scan" as Route<Object?>);
+            Navigator.popAndPushNamed(context, "/scan");
           }, icon: const Icon(Icons.qr_code_scanner))
         ],
       ),
