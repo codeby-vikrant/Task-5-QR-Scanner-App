@@ -34,7 +34,7 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
               final List<Barcode> barcodes = capture.barcodes;
               final Uint8List? image = capture.image;
               for (final barcode in barcodes) {
-                print("Barcode found ${barcode.rawValue}");
+                print("QRCode found ${barcode.rawValue}");
               }
               if (image != null) {
                 showDialog(
@@ -48,7 +48,7 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
                           Image(image: MemoryImage(image)),
                           const SizedBox(height: 10),
                           Text(
-                            'Barcode Type: ${barcodes.first.format}',
+                            'QRCode Type: ${barcodes.first.format}',
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold),
                           ),
