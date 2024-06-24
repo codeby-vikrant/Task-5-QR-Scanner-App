@@ -32,6 +32,11 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
             for (final barcode in barcodes) {
               print("Barcode found ${barcode.rawValue}");
             }
+            if (image != null) {
+              showDialog(context: context, builder: (context) {
+                return const AlertDialog();
+              });
+            }
           }),
     );
   }
