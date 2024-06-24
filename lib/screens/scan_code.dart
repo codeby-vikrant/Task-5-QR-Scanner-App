@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
 
 class ScanCodeScreen extends StatefulWidget {
   const ScanCodeScreen({super.key});
@@ -13,10 +14,15 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter QR Scan App"),
-        actions: [IconButton(onPressed: (){
-          Navigator.popAndPushNamed(context, "/generate");
-        }, icon: const Icon(Icons.qr_code))],
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.popAndPushNamed(context, "/generate");
+              },
+              icon: const Icon(Icons.qr_code))
+        ],
       ),
+      body: MobileScanner(onDetect: (capture) {}),
     );
   }
 }
