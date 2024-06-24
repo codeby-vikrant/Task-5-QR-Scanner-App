@@ -15,7 +15,7 @@ class _GenerateCodeScreenState extends State<GenerateCodeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.purple[100],
         title: const Text("Generate QR Code"),
         actions: [
           IconButton(
