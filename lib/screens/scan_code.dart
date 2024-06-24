@@ -22,7 +22,9 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
               icon: const Icon(Icons.qr_code))
         ],
       ),
-      body: MobileScanner(onDetect: (capture) {}),
+      body: MobileScanner(
+        controller: MobileScannerController(detectionSpeed: DetectionSpeed.noDuplicates),
+        onDetect: (capture) {}),
     );
   }
 }
