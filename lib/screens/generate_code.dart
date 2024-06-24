@@ -11,16 +11,25 @@ class _GenerateCodeScreenState extends State<GenerateCodeScreen> {
   String? qrData;
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Generate QR Code"),
         actions: [
-          IconButton(onPressed: (){
-            Navigator.popAndPushNamed(context, "/scan");
-          }, icon: const Icon(Icons.qr_code_scanner))
+          IconButton(
+              onPressed: () {
+                Navigator.popAndPushNamed(context, "/scan");
+              },
+              icon: const Icon(Icons.qr_code_scanner))
         ],
       ),
-      body: Container(),
+      body: const Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+        ),
+      ),
     );
   }
 }
