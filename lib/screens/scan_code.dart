@@ -38,6 +38,7 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
                   builder: (context) {
                     return AlertDialog(
                       title: Text(barcodes.first.rawValue ?? ""),
+                      content: Image(image: MemoryImage(image)),
                     );
                   });
             }
