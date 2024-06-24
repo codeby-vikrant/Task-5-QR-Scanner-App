@@ -23,8 +23,11 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
         ],
       ),
       body: MobileScanner(
-        controller: MobileScannerController(detectionSpeed: DetectionSpeed.noDuplicates),
-        onDetect: (capture) {}),
+          controller: MobileScannerController(
+              detectionSpeed: DetectionSpeed.noDuplicates),
+          onDetect: (capture) {
+            print(capture);
+          }),
     );
   }
 }
