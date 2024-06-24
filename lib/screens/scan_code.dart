@@ -14,7 +14,7 @@ class _ScanCodeScreenState extends State<ScanCodeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.purple[100],
         title: const Text("Flutter QR Scan App"),
         actions: [
           IconButton(
